@@ -145,13 +145,13 @@ pass.addEventListener('keyup',function(){
       strength += 1;
   
     }
-    if((password.length>4)&&((password.match(/[a-z]+/)&&password.match(/[A-Z]+/)) || (password.match(/[a-z]+/)&&password.match(/[0-9]+/)) || (password.match(/[0-9]+/)&&password.match(/[A-Z]+/)) ))
+    if((password.length>4)&&((password.match(/(?=.*[a-z])(?=.*[A-Z])/))|| (password.match(/(?=.*[a-z])(?=.*[0-9])/)) || (password.match(/(?=.*[0-9])(?=.*[A-Z])/) )))
     {
       strength += 1;
   
     }
  
-    if((password.length>=8)&&(password.match(/[a-z]+/))&&(password.match(/[A-Z]+/))&&(password.match(/[0-9]+/)))
+    if((password.length>=8)&&(password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/)))
     {
       strength += 1;
   
