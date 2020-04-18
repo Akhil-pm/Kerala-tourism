@@ -40,18 +40,22 @@
       <div class="container-fluid signup">
         <div class="row">
         <div class="col-md-6 offset-md-3">  
-          <form id="sign" action="login.html">
+          <form id="sign" action="login.html" onsubmit="return validate()">
           <h1>Sign Up</h1>
 
          <div class="row">
           <div class="col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" id="Name" placeholder="First Name"> 
+            <label for="FName">First Name </label>
+            <small id="name1">** required</small>
+            <input type="text" class="form-control" id="FName" placeholder="First Name"> 
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" id="Name" placeholder="Last Name"> 
+            <label for="LName">Last Name </label>
+            <small id="name2">** required</small>
+            <input type="text" class="form-control" id="LName" placeholder="Last Name"> 
           </div>
         </div>
         </div>
@@ -60,11 +64,15 @@
         <div class="row">
           <div class="col-md-6">
           <div class="form-group">
+            <label for="UserName" >Username </label>
+                <small id="usname">** required</small>
             <input type="text" class="form-control" id="UserName" placeholder="Desired username" > 
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
+            <label for="phoneNumber">Phone Number </label>
+                <small id="pnum">** required</small>
             <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
           </div>
         </div>
@@ -73,17 +81,26 @@
 
 
           <div class="form-group">
+            <label for="inputEmail">Email Address</label>
+            <small id="mail">** required</small>
             <input type="text" class="form-control" id="inputEmail" placeholder="Email">
           </div>
         <div class="row">
          <div class="col-md-6">
           <div class="form-group">
-            
-            <input type="password" class="form-control" id="InputPassword1" placeholder="password">
+            <label for="InputPassword1">Password </label>
+                <small id="pass1">** required</small>
+            <input type="password" class="form-control" id="InputPassword1" placeholder="password"><br>
+            <div class="progress" id="prog">
+              <div class="progress-bar" id="strength" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="strength1">Low</div>
           </div>
         </div>
            <div class="col-md-6">
           <div class="form-group">
+            <label for="confirmPassword">Confirm Password </label>
+                <small id="pass2">** required</small>
             <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
           </div>
         </div>
@@ -164,7 +181,7 @@
       </div>
       </footer>
       
-
+      <script src="../js files/signup.js"></script>
       <script src="https://kit.fontawesome.com/b718dab622.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

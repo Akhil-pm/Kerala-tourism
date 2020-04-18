@@ -18,7 +18,7 @@ body{
 
 #sign{
     border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(80, 80, 96);
+    background-color: rgb(21, 3, 1);
     opacity: 0.9; 
     padding: 40px 40px;
     margin-top: 100px;
@@ -46,7 +46,18 @@ body{
     color: seashell;
 }
 
-
+.form-group small
+{  
+    color: rgb(247, 117, 41);
+    visibility: hidden;
+}
+#prog{
+    visibility: hidden;
+    height: 5px;
+}
+#strength1{
+    visibility: hidden;
+}
 
 
 
