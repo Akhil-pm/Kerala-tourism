@@ -32,3 +32,29 @@ else{
   return true;
 }
 }
+
+
+let email= document.getElementById('email')
+email.addEventListener('input',function(){
+  checkMail(email.value)
+})
+function checkMail(mail)
+{
+  let regexp1=/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,4})(\.[a-z]{2,4})?$/;
+  if(regexp1.test(mail)==false)
+    {
+      document.getElementById('email').style.background="url(../images/invalid.png)";
+      document.getElementById('email').style.backgroundRepeat ="no-repeat";
+      document.getElementById('email').style.backgroundSize ="22px";
+      document.getElementById('email').style.backgroundPosition ="98% 70%";
+      document.getElementById('email').style.backgroundColor ="white";
+    }
+  else{
+    document.getElementById('email').style.background="url(../images/valid.png)";
+    document.getElementById('email').style.backgroundRepeat ="no-repeat";
+    document.getElementById('email').style.backgroundSize ="22px";
+    document.getElementById('email').style.backgroundPosition ="98% 70%";
+    document.getElementById('email').style.backgroundColor ="white";
+
+  }
+  }
